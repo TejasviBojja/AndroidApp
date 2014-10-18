@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5AB"
+    android:gravity="fill_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.speechrecorder.EmailActivity" >
+
+    <TextView
+        android:id="@+id/mailPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sendTitle" 
+        android:textStyle="bold"
+        android:textColor="#800000"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/imageEmail"
+        android:src="@drawable/ic_launcher_image" />
+    
+    <TextView
+        android:id="@+id/mailAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/mailAdd"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#800000"
+        android:textStyle="bold" />
+    
+    <EditText
+        android:id="@+id/emailIDField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:background="#000000"
+        android:ems="10"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@null"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+     <Button
+         android:id="@+id/cancelEmail"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="150dp"
+         android:layout_marginStart="20dp"
+         android:layout_marginTop="225dp"
+         android:background="#800000"
+         android:onClick="cancelEmailOnClick"
+         android:padding="10dp"
+         android:text="@string/cancelSend"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold" />
+
+     <Button
+         android:id="@+id/sendEmail"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/cancelEmail"
+         android:layout_alignBottom="@+id/cancelEmail"
+         android:layout_toLeftOf="@+id/image"
+         android:layout_toStartOf="@+id/image"
+         android:background="#800000"
+         android:onClick="sendEmailOnClick"
+         android:padding="10dp"
+         android:text="@string/sendEmail"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold" />
+
+</RelativeLayout>
